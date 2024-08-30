@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+    --cor-fundo: #EAEAEA; /* Um tom suave de cinza para o fundo */
+    --cor-principal: #1E1E1E; /* Preto muito escuro para a caixa principal, remetendo ao estilo elegante dos carros de luxo */
+    --cor-secundaria: #FF4F4F; /* Vermelho vibrante para os botões, que combina com detalhes esportivos */
+    --cor-destaque: #FF6F6F; /* Vermelho mais claro para o destaque */
+    --cor-texto: #333333; /* Um tom escuro para o texto, bom contraste com o fundo claro */
+    --cor-borda: #CCCCCC; /* Cor clara para bordas e linhas */
+    --cor-sombra: rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada para um efeito mais moderno */
+    --cor-fundo-pixel: url('https://files.porsche.com/filestore/image/multimedia/none/rd-2014-christophorus-issue368-article01-banner/normal/eebafde5-222b-11e4-8b02-001a64c55f5c;s25/porsche-normal.jpg'); /* Caminho para a imagem de fundo em pixel art */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    background-image: var(--cor-fundo-pixel); /* Adiciona a imagem de pixel art como fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: repeat; /* Repete a imagem se necessário */
+    color: var(--cor-texto);
+    font-family: 'Source Code Pro', monospace; /* Fonte com estilo técnico e moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px; /* Borda arredondada mais suave */
+    box-shadow: 0 8px 16px var(--cor-sombra); /* Sombra mais pronunciada para um efeito de elevação moderno */
+    border: 1px solid var(--cor-borda); /* Adiciona uma borda leve para um toque de sofisticação */
+}
+
+h1 {
+    color: var(--cor-secundaria);
+    font-size: 2rem; /* Tamanho maior para destaque */
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Fonte mais limpa e moderna para subtítulos */
+    color: var(--cor-texto);
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: #FFF; /* Texto branco para contraste com o fundo escuro */
+    border: none;
+    border-radius: 25px; /* Borda mais arredondada para um visual mais moderno */
+    padding: 15px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição para o efeito de transformação */
+    box-shadow: 0 4px 8px var(--cor-sombra); /* Sombra sutil para um efeito de botão elevado */
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: scale(1.05); /* Efeito de aumento sutil no hover */
+}
+
+.caixa-resultado {
+    display: none;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa
